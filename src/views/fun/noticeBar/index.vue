@@ -1,16 +1,15 @@
+<!--通知组件-->
 <template>
 	<div class="notice-bar-container">
 		<el-card shadow="hover" header="滚动通知栏：默认">
 			<NoticeBar
-				text="🎉🎉🔥基于vue3.x 、Typescript、vite、Element plus等，适配手机、平板、pc
-				的后台开源免费模板库（vue2.x请切换vue-prev-admin分支），仓库地址：https://gitee.com/lyt-top/vue-next-admin"
+				text="学无止境，无止境学。。。"
 			/>
 		</el-card>
 
 		<el-card shadow="hover" header="滚动通知栏：设置样式" class="mt15">
 			<NoticeBar
-				text="🎉🎉🔥基于vue3.x 、Typescript、vite、Element plus等，适配手机、平板、pc
-				的后台开源免费模板库（vue2.x请切换vue-prev-admin分支），仓库地址：https://gitee.com/lyt-top/vue-next-admin"
+				text="学无止境，无止境学。。。"
 				leftIcon="iconfont icon-tongzhi2"
 				rightIcon="el-icon-arrow-right"
 				background="#ecf5ff"
@@ -56,10 +55,10 @@ export default defineComponent({
 	setup() {
 		const state = reactive({
 			noticeList: [
-				'🎉🎉🔥基于vue3.x 、Typescript、vite、Element plus等',
-				'适配手机、平板、pc的后台开源免费模板库（vue2.x请切换vue-prev-admin分支）',
-				'仓库地址：https://gitee.com/lyt-top/vue-next-admin',
-				'演示地址：https://lyt-top.gitee.io/vue-next-admin-preview/#/login',
+				'学无止境，无止境学。。。',
+				'学无止境，无止境学。。。',
+				'学无止境，无止境学。。。',
+				'学无止境，无止境学。。。',
 			],
 			tableData: [
 				{

@@ -1,11 +1,17 @@
+<!--大数据图表模板-->
 <template>
 	<div class="chart-scrollbar layout-view-bg-white" :style="{ height: `calc(100vh - ${initTagViewHeight}` }">
 		<div class="chart-warp">
+      <!--图表头部开始-->
 			<div class="chart-warp-top">
 				<ChartHead />
 			</div>
-			<div class="chart-warp-bottom">
-				<!-- 左边 -->
+      <!--图表头部结束-->
+
+      <!--图表主体开始-->
+      <div class="chart-warp-bottom">
+
+        <!-- 左侧三个图表开始 -->
 				<div class="big-data-down-left">
 					<div class="flex-warp-item">
 						<div class="flex-warp-item-box">
@@ -88,8 +94,10 @@
 						</div>
 					</div>
 				</div>
+        <!-- 左侧三个图表结束 -->
 
-				<!-- 中间 -->
+
+        <!-- 中间两个图表开始 -->
 				<div class="big-data-down-center">
 					<div class="big-data-down-center-one">
 						<div class="big-data-down-center-one-content">
@@ -119,8 +127,9 @@
 						</div>
 					</div>
 				</div>
+        <!-- 中间两个图表结束 -->
 
-				<!-- 右边 -->
+        <!-- 右边三个图表开始 -->
 				<div class="big-data-down-right">
 					<div class="flex-warp-item">
 						<div class="flex-warp-item-box">
@@ -196,8 +205,12 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+        <!-- 右边三个图表结束 -->
+
+      </div>
+      <!--图表主体结束-->
+
+    </div>
 	</div>
 </template>
 

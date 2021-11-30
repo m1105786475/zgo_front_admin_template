@@ -72,7 +72,7 @@ export const activitiesList = [
 		time1: '今天',
 		time2: '12:20:30',
 		title: '更名',
-		label: '正式更名为 vue-next-admin',
+		label: '正式更名为 zgo_front_admin_template',
 	},
 	{
 		time1: '02-17',

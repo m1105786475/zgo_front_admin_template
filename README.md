@@ -134,3 +134,222 @@
     ],
 },
 ```
+
+## 外链和内嵌iframe
+```typescript
+{
+    path: '/link',
+    name: 'layoutLinkView',
+    component: () => import('/@/layout/routerView/link.vue'),
+    meta: {
+        title: 'message.router.layoutLinkView',
+        isLink: 'https://element-plus.gitee.io/#/zh-CN/component/installation',
+        isHide: false,
+        isKeepAlive: false,
+        isAffix: false,
+        isIframe: false,
+        auth: ['admin'],
+        icon: 'iconfont icon-caozuo-wailian',
+    },
+},
+{
+        path: '/iframes',
+        name: 'layoutIfameView',
+        component: () => import('/@/layout/routerView/iframes.vue'),
+        meta: {
+            title: 'message.router.layoutIfameView',
+            isLink: 'https://wdd.js.org/jsplumb-chinese-tutorial/#/',
+            isHide: false,
+            isKeepAlive: false,
+            isAffix: true,
+            isIframe: true,
+            auth: ['admin'],
+            icon: 'iconfont icon-neiqianshujuchucun',
+        },
+},
+```
+
+## 路由参数
+普通路由传参示例
+- src/views/params/common/index.vue
+- src/views/params/common/details.vue
+- src/views/params/dynamic/index.vue
+- src/views/params/dynamic/details.vue
+
+```typescript
+{
+    path: '/params',
+    name: 'paramsIndex',
+    component: () => import('/@/layout/routerView/parent.vue'),
+    redirect: '/params/common',
+    meta: {
+        title: 'message.router.paramsIndex',
+        isLink: '',
+        isHide: false,
+        isKeepAlive: true,
+        isAffix: false,
+        isIframe: false,
+        auth: ['admin'],
+        icon: 'iconfont icon-zhongduancanshu',
+    },
+    children: [
+        {
+            path: '/params/common',
+            name: 'paramsCommon',
+            component: () => import('/@/views/params/common/index.vue'),
+            meta: {
+                title: 'message.router.paramsCommon',
+                isLink: '',
+                isHide: false,
+                isKeepAlive: true,
+                isAffix: false,
+                isIframe: false,
+                auth: ['admin'],
+                icon: 'iconfont icon-putong',
+            },
+        },
+        {
+            path: '/params/common/details',
+            name: 'paramsCommonDetails',
+            component: () => import('/@/views/params/common/details.vue'),
+            meta: {
+                title: 'message.router.paramsCommonDetails',
+                isLink: '',
+                isHide: true,
+                isKeepAlive: true,
+                isAffix: false,
+                isIframe: false,
+                auth: ['admin'],
+                icon: 'el-icon-s-order',
+            },
+        },
+        {
+            path: '/params/dynamic',
+            name: 'paramsDynamic',
+            component: () => import('/@/views/params/dynamic/index.vue'),
+            meta: {
+                title: 'message.router.paramsDynamic',
+                isLink: '',
+                isHide: false,
+                isKeepAlive: true,
+                isAffix: false,
+                isIframe: false,
+                auth: ['admin'],
+                icon: 'iconfont icon-dongtai',
+            },
+        },
+        {
+            path: '/params/dynamic/details/:t/:id',
+            name: 'paramsDynamicDetails',
+            component: () => import('/@/views/params/dynamic/details.vue'),
+            meta: {
+                title: 'message.router.paramsDynamicDetails',
+                isLink: '',
+                isHide: true,
+                isKeepAlive: true,
+                isAffix: false,
+                isIframe: false,
+                auth: ['admin'],
+                icon: 'el-icon-s-order',
+            },
+        },
+    ],
+    },
+```
+
+## 权限管理
+```typescript
+{
+    path: '/limits',
+    name: 'limits',
+    component: () => import('/@/layout/routerView/parent.vue'),
+    redirect: '/limits/frontEnd',
+    meta: {
+        title: 'message.router.limits',
+        isLink: '',
+        isHide: false,
+        isKeepAlive: true,
+        isAffix: false,
+        isIframe: false,
+        auth: ['admin', 'test'],
+        icon: 'iconfont icon-quanxian',
+    },
+    children: [
+        {
+            path: '/limits/frontEnd',
+            name: 'limitsFrontEnd',
+            component: () => import('/@/layout/routerView/parent.vue'),
+            redirect: '/limits/frontEnd/page',
+            meta: {
+                title: 'message.router.limitsFrontEnd',
+                isLink: '',
+                isHide: false,
+                isKeepAlive: true,
+                isAffix: false,
+                isIframe: false,
+                auth: ['admin', 'test'],
+            },
+            children: [
+                {
+                    path: '/limits/frontEnd/page',
+                    name: 'limitsFrontEndPage',
+                    component: () => import('/@/views/limits/frontEnd/page/index.vue'),
+                    meta: {
+                        title: 'message.router.limitsFrontEndPage',
+                        isLink: '',
+                        isHide: false,
+                        isKeepAlive: true,
+                        isAffix: false,
+                        isIframe: false,
+                        auth: ['admin', 'test'],
+                    },
+                },
+                {
+                    path: '/limits/frontEnd/btn',
+                    name: 'limitsFrontEndBtn',
+                    component: () => import('/@/views/limits/frontEnd/btn/index.vue'),
+                    meta: {
+                        title: 'message.router.limitsFrontEndBtn',
+                        isLink: '',
+                        isHide: false,
+                        isKeepAlive: true,
+                        isAffix: false,
+                        isIframe: false,
+                        auth: ['admin', 'test'],
+                    },
+                },
+            ],
+        },
+        {
+            path: '/limits/backEnd',
+            name: 'limitsBackEnd',
+            component: () => import('/@/layout/routerView/parent.vue'),
+            meta: {
+                title: 'message.router.limitsBackEnd',
+                isLink: '',
+                isHide: false,
+                isKeepAlive: true,
+                isAffix: false,
+                isIframe: false,
+                auth: ['admin', 'test'],
+            },
+            children: [
+                {
+                    path: '/limits/backEnd/page',
+                    name: 'limitsBackEndEndPage',
+                    component: () => import('/@/views/limits/backEnd/page/index.vue'),
+                    meta: {
+                        title: 'message.router.limitsBackEndEndPage',
+                        isLink: '',
+                        isHide: false,
+                        isKeepAlive: true,
+                        isAffix: false,
+                        isIframe: false,
+                        auth: ['admin', 'test'],
+                    },
+                },
+            ],
+        },
+    ],
+},
+```
