@@ -1,7 +1,8 @@
+<!--底部中间件-->
 <template>
 	<div class="layout-footer mt15" v-show="isDelayFooter">
 		<div class="layout-footer-warp">
-			<div>vue-next-admin，Made by lyt with ❤️</div>
+			<div>zgo_front_admin, 基于vue-next-admin二次开发️</div>
 			<div class="mt5">{{ $t('message.copyright.one5') }}</div>
 		</div>
 	</div>

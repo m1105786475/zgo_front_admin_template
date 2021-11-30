@@ -1,8 +1,8 @@
 {
-	"name": "vue-next-admin",
-	"version": "1.1.2",
-	"description": "vue3 vite next admin template",
-	"author": "lyt_20201208",
+	"name": "zgo_front_admin_template",
+	"version": "0.1.0",
+	"description": "前端后台管理系统模板",
+	"author": "zhangdapeng520",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite",
@@ -72,7 +72,7 @@
 		"vuejs/vue-next",
 		"element-ui",
 		"element-plus",
-		"vue-next-admin",
+		"zgo_front_admin_template",
 		"next-admin"
 	],
 	"repository": {
