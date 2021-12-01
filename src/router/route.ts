@@ -406,6 +406,25 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 							icon: 'el-icon-s-order',
 						},
 					},
+
+					// 文章页面开始
+					{
+						path: '/pages/article',
+						name: 'pagesArticle',
+						component: () => import('/@/views/pages/articleView/index.vue'),
+						meta: {
+							title: 'message.router.pagesArticle',
+							isLink: '',
+							isHide: false,
+							isKeepAlive: true,
+							isAffix: false,
+							isIframe: false,
+							auth: ['admin', 'test'],
+							icon: 'el-icon-present',
+						},
+					},
+					// 文章页面结束
+
 					{
 						path: '/pages/iocnfont',
 						name: 'pagesIocnfont',

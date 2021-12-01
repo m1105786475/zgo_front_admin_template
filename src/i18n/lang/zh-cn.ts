@@ -39,6 +39,7 @@ export default {
 		pagesFiltering: '过滤筛选组件',
 		pagesFilteringDetails: '过滤筛选组件详情',
 		pagesFilteringDetails1: '过滤筛选组件详情111',
+		pagesArticle: '文章管理',
 		pagesIocnfont: 'iconfont 字体图标',
 		pagesElement: 'element 字体图标',
 		pagesAwesome: 'awesome 字体图标',
