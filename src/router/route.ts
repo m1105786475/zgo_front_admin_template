@@ -111,6 +111,21 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 				},
 				children: [
 					{
+						path: '/fun/vxtable',
+						name: 'vxtable',
+						component: () => import('/@/views/fun/vxtable/index.vue'),
+						meta: {
+							title: 'message.router.vxtable',
+							isLink: '',
+							isHide: false,
+							isKeepAlive: true,
+							isAffix: false,
+							isIframe: false,
+							auth: ['admin', 'test'],
+							icon: 'el-icon-thumb',
+						},
+					},
+					{
 						path: '/fun/tagsView',
 						name: 'funTagsView',
 						component: () => import('/@/views/fun/tagsView/index.vue'),

@@ -32,7 +32,9 @@
 		"vue-router": "^4.0.12",
 		"vue-web-screen-shot": "^1.2.0",
 		"vuex": "^4.0.2",
-		"wangeditor": "^4.7.9"
+		"vxe-table": "^4.1.14",
+		"wangeditor": "^4.7.9",
+		"xe-utils": "^3.4.3"
 	},
 	"devDependencies": {
 		"@types/axios": "^0.14.0",

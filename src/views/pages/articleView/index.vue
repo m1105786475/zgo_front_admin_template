@@ -29,7 +29,7 @@
           style="width: 100%">
         <!--实现多选-->
         <el-table-column type="selection"></el-table-column>
-        <el-table-column prop="id" label="ID" show-overflow-tooltip></el-table-column>
+        <el-table-column prop="index" label="#" show-overflow-tooltip></el-table-column>
         <el-table-column prop="title" label="标题" show-overflow-tooltip></el-table-column>
         <el-table-column label="封面图片" show-overflow-tooltip>
           <template #default="scope">
@@ -94,7 +94,7 @@ export default {
       const data: Array<object> = [];
       for (let i = 0; i < 20; i++) { // 生成20个模拟数据
         data.push({
-          id: i + 1,
+          index: i + 1,
           title: `标题${i}`,
           head_img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1633081619,2004077072&fm=26&gp=0.jpg',
           intro: `简介${i}`,
@@ -131,7 +131,7 @@ export default {
     };
 
     // 批量删除
-    const onDeleteMany = ()=>{
+    const onDeleteMany = () => {
       console.log("要删除的数据有：", state.multipleSelection)
     };
 
